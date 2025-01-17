@@ -35,9 +35,7 @@ const trpc = createTRPCClient<AppRouter>({
 
 async function fetchHello() {
   try {
-    const helloResponse = await trpc.greeting.hello.query({
-      name: 'world',
-    });
+    const helloResponse = await trpc.greeting.hello.query({name: 'bye'})
     console.log('helloResponse', helloResponse);
   } catch (error) {
     console.error('An error occurred while fetching hello:', error);
